@@ -48,22 +48,35 @@ ul
     list-style-type: none;
 }
 
+section ul
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section ul li
+{
+    text-align: center;
+}
+
+
 h2
 {
     text-decoration: none;
-    text-align: center;
     color: white;
-    
+    text-align: center;
 }
 
-section
-{
-    display: flex;
-    
-}
 
 @media(min-width:800px)
 {
+    
+    nav
+    {
+        flex-grow: 1;
+    }
+    
     nav  ul 
     {
         flex-direction: row;
@@ -73,11 +86,18 @@ section
     header
     {
         display: flex;
+        justify-content: space-around;
         align-items:center;
     }
     
     header h1
     {
         align-self:flex-start;
+    }
+    
+    section ul
+    {
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
