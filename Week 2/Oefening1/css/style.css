@@ -10,3 +10,45 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+h1
+{
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav
+{
+    display: flex;
+    align-content: space-between;
+}
+
+
+
+
+nav ul li a
+{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+h2
+{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    
+}
+
+section
+{
+    display: flex;
+    
+}
