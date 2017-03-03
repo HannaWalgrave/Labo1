@@ -101,3 +101,18 @@ h2
         justify-content: space-around;
     }
 }
+
+@media(min-width:1200px)
+{
+    nav ul
+    {
+        align-self: flex-end;
+        justify-content: flex-end;
+    }
+    
+    h1
+    {
+        padding-left: 5%;
+    }
+}
+
