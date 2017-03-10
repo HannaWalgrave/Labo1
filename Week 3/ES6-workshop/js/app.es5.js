@@ -11,6 +11,8 @@ Client.prototype.speak = function(p_question){
 
 var client1 = new Client("Slim Shady",1989);
 client1.speak("IS het als af?");*/
+let firstname = "hanna";
+console.log(`hi my name is ${firstname}`);
 
 function CardApp()
 {
