@@ -12,7 +12,7 @@
     "babel-preset-env": "^1.2.1"
   },
   "scripts": {
-    "build": "babel --presets env scripts/app.es6.js -o scripts/app.es5.js -s true -w"
+    "build": "babel --presets env js/app.es6.js -o js/app.es5.js -s true -w"
   },
   "repository": {
     "type": "git",
