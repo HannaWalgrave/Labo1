@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.es6.js"],"names":[],"mappings":";;AAAA,IAAI,YAAY,OAAhB;AACA,QAAQ,GAAR,oBAA6B,SAA7B","file":"app.es5.js","sourcesContent":["let firstname = \"hanna\";\r\nconsole.log(`hi my name is ${firstname}`);\r\n\r\n"]}
