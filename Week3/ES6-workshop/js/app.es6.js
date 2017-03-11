@@ -12,11 +12,11 @@ CardApp.prototype.resetForm = function(){
     this.noteInput.focus();
 }
 CardApp.prototype.addNote = function(e){
-    var newNote = document.createElement("div");
+    let newNote = document.createElement("div");
     newNote.setAttribute("class", "card");
     newNote.innerHTML = "<p>" + this.noteInput.value +"</p>";
     
-    var noteLink = document.createElement("a");
+    let noteLink = document.createElement("a");
     noteLink.setAttribute("class", "card-remove");
     noteLink.innerHTML = "Remove";
     noteLink.setAttribute("href", "#");
@@ -29,8 +29,8 @@ CardApp.prototype.addNote = function(e){
 
 }
 CardApp.prototype.removeNote = function(e){
-    var noteToRemove = e.target.parentElement;
+    let noteToRemove = e.target.parentElement;
     this.notesContainer.removeChild(noteToRemove);
     e.preventDefault();
 }
-var myApp = new CardApp();
+let myApp = new CardApp();
