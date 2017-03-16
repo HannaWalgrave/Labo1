@@ -33,4 +33,6 @@ CardApp.prototype.removeNote = function(e){
     this.notesContainer.removeChild(noteToRemove);
     e.preventDefault();
 }
+
+
 let myApp = new CardApp();

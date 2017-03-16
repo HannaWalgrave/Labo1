@@ -34,6 +34,7 @@ CardApp.prototype.removeNote = function (e) {
     this.notesContainer.removeChild(noteToRemove);
     e.preventDefault();
 };
+
 var myApp = new CardApp();
 
 //# sourceMappingURL=app.es5.js.map
