@@ -1,21 +1,21 @@
 let firstname = "hanna";
 console.log(`hi my name is ${firstname}`);
 
-function CardApp(){
-    this.buttonAddNote = document.getElementById("btnAddNote");
+class CardApp{
+    
+    constructor()
+    {
+        this.buttonAddNote = document.getElementById("btnAddNote");
     this.notesContainer = document.querySelector(".notes");
     this.noteInput = document.querySelector("#txtAddNote");
     this.buttonAddNote.addEventListener("click", this.addNote.bind(this));
-}
-CardApp.prototype.resetForm = function(){
-    this.noteInput.value ="";
-    this.noteInput.focus();
-}
-CardApp.prototype.addNote = function(e){
+    }
+
+    addNote(e){
+        
     let newNote = document.createElement("div");
     newNote.setAttribute("class", "card");
     newNote.innerHTML = "<p>" + this.noteInput.value +"</p>";
-    
     let noteLink = document.createElement("a");
     noteLink.setAttribute("class", "card-remove");
     noteLink.innerHTML = "Remove";
@@ -26,13 +26,21 @@ CardApp.prototype.addNote = function(e){
     
     this.notesContainer.appendChild(newNote);
     this.resetForm();
-
-}
-CardApp.prototype.removeNote = function(e){
-    let noteToRemove = e.target.parentElement;
-    this.notesContainer.removeChild(noteToRemove);
+        
     e.preventDefault();
+        
+    }
+    
+    removeNote(event){
+        let noteToRemove = event.target.parentElement;
+        this.notesContainer.removeChild(noteToRemove);
+        event.preventDefault();
+    }
+    
+        resetForm(){
+        this.noteInput.value ="";
+        this.noteInput.focus();
+    }
+
 }
-
-
 let myApp = new CardApp();
