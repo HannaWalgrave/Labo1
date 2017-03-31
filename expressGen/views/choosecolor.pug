@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 choose a color
+  .colors
+    ul
+      li
+        a(href="#" data-color="yellow" class="yellow") yellow
+      li
+        a(href="#" data-color="red" class="red") red
+  script(src="/primus/primus.js")
+  script(src="/javascripts/choosecolor.js")
