@@ -54,20 +54,32 @@ class Weather
         var color;
         var icon;
         var expl;
-        if ((this.weather.summary).indexOf("cloudy")){
-            color = "#ecf0f1";
+        var sum = this.weather.summary;
+        if (sum.includes("Cloudy") == true){
+            color = "#D9D9D9";
             icon = "/images/iconCloudy.svg" ;
-            expl = ""
+            expl = "Voorzie genoeg water voor je kiemende worteltjes"+
+                " Stilstand van groei door vochtgebrek moet vermeden worden, daar dit zorgt voor voze of gescheurde worteltjes."
         }
-        else if ((this.weather.summary).indexOf("clear")){
-            color = "#C3D8E2";
+        else if (sum.includes("Clear") == true){
+            color = "#87CEEB";
+            icon = "/images/iconClear.svg" ;
+            expl = "Voorzie genoeg water voor je kiemende worteltjes"+
+                " een droge bovengrond wil ook niet altijd zeggen dat je plant te weinig water heeft"+
+                " Graaf een klein stukje in de grond om te zien of de grond nog vochtig is"+
+                " Stilstand van groei door vochtgebrek moet vermeden worden, daar dit zorgt voor voze of gescheurde worteltjes."
         }
-        else if ((this.weather.summary).indexOf("rain")){
+        else if (sum.includes("Rain") == true){
             color = "#BDBDBD";
+            expl = "Let op dat je wortelen niet te nat staan!" +
+                "Dek je perceel of potten bijvoorbeeld af met stro of een dikke laag mulch."+
+                "Een te hoge schommeling in de vochtigheid van de bodem kan ervoor zorgen dat de wortel barst."+
+                "Probeer te wieden tijdens regendagen en bij veel wind, dan is de wortelvlieg veel minder actief. "
         }
         $("body").css("background-color",color);
         $("#app").append(`<h1>${Math.round(this.weather.temperature)}&deg;</h1>`);
         $("#icon").append(`<img src="${icon}" alt="">`);
+        $("#expl").append(`<p>${expl}</p>`);
     }
 
     storeInCache(){
@@ -108,6 +120,7 @@ class Weather
         if(time < now && day != today )
         {
             console.log("it's an hour later");
+            this.updateUI();
         }
         console.log("it's",time,today);
     }
