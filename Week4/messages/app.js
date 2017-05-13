@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var path = require('path');
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Messages');
 
 app.set('view engine', 'pug');

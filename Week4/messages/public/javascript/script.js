@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $.ajax({
+        method:'post',
+        url:'http://localhost/messages/output',
+        data:{message:'send'}
+    }).done(function(response){
+        console.log(response);
+    });
+});
