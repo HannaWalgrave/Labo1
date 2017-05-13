@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var controller = require('../controllers/message')
+var Message = require('../models/message');
+var mongoose = require('mongoose');
 
 router.get('/', function (req, res) {
-    res.send("GET messages");
+    res.render('index');
 });
 
 router.get('/:id', function (req, res) {
@@ -10,8 +13,8 @@ router.get('/:id', function (req, res) {
     res.send("GET message with :id " + id);
 });
 
-router.post('/', function (req, res){
-    res.send("POST messages");
-});
+router.post('/output', controller.getAll);
+router.post('/', controller.create);
+
 
 module.exports = router;
