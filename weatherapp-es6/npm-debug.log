@@ -14,7 +14,7 @@
 4 verbose stack     at ReadFileContext.<anonymous> (E:\programs\Node\node_modules\npm\node_modules\read-package-json\read-json.js:295:20)
 4 verbose stack     at ReadFileContext.callback (E:\programs\Node\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:78:16)
 4 verbose stack     at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:366:13)
-5 verbose cwd E:\Documenten\GitHub\weatherapp-es6\weatherapp-es6
+5 verbose cwd E:\Documenten\GitHub\Labo1\weatherapp-es6
 6 error Windows_NT 10.0.14393
 7 error argv "E:\\programs\\Node\\node.exe" "E:\\programs\\Node\\node_modules\\npm\\bin\\npm-cli.js" "start"
 8 error node v6.10.2
