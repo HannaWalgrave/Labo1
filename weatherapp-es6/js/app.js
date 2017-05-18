@@ -57,13 +57,13 @@ class Weather
         var sum = this.weather.summary;
         if (sum.includes("Cloudy") == true){
             color = "#D9D9D9";
-            icon = "/images/iconCloudy.svg" ;
+            icon = "images/iconCloudy.svg" ;
             expl = "Voorzie genoeg water voor je kiemende worteltjes"+ "<br>" +
-                " Stilstand van groei door vochtgebrek moet vermeden worden, daar dit zorgt voor voze of gescheurde worteltjes.";
+                " Stilstand van groei door vochtgebrek moet vermeden worden, dit zorgt voor voze of gescheurde worteltjes.";
         }
         else if (sum.includes("Clear") == true){
             color = "#87CEEB";
-            icon = "/images/iconClear.svg" ;
+            icon = "images/iconClear.svg" ;
             expl = "Voorzie genoeg water voor je kiemende worteltjes"+
                 " een droge bovengrond wil ook niet altijd zeggen dat je plant te weinig water heeft"+
                 " Graaf een klein stukje in de grond om te zien of de grond nog vochtig is"+
@@ -71,6 +71,7 @@ class Weather
         }
         else if (sum.includes("Rain") == true){
             color = "#BDBDBD";
+            icon = "images/rainy.svg";
             expl = "Let op dat je wortelen niet te nat staan!" +
                 "Dek je perceel of potten bijvoorbeeld af met stro of een dikke laag mulch."+
                 "Een te hoge schommeling in de vochtigheid van de bodem kan ervoor zorgen dat de wortel barst."+
@@ -78,7 +79,7 @@ class Weather
         }
         $("body").css("background-color",color);
         $("#app").append(`<h1>${Math.round(this.weather.temperature)}&deg;</h1>`);
-        $("#icon").append(`<img src="${icon}" alt="">`);
+        $("#icon").append(`<img src=${icon} alt="iconweather" class="icon">`);
         $("#expl").append(`<p>${expl}</p>`);
     }
 
