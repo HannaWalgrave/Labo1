@@ -19,6 +19,7 @@ function getAll (req, res) {
     Message.find( function(err, messages){
         if (err) return console.error(err);
         res.send(messages);
+        res.render('/output');
     });
 }
 module.exports.getAll = getAll;

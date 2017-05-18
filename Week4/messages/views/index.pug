@@ -2,15 +2,17 @@ doctype html
 html(lang='en')
   head
     link(rel='stylesheet', href='css/style.css')
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
     title Messaging App
   body
-    div
+    div.container
       h1 Start messaging!
-      form(action='#', method='post')
+      form.form-group(action='#', method='post')
         label(for='user') User
-        input#user(name='user', type='text')
+        input.form-control#user(name='user', type='text')
         label(for='message') Message
-        input#message(name='message', type='text')
-        button(type='submit') Send Message
+        input.form-control#message(name='message', type='text')
+        button.btn(type='submit') Send Message
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+  script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
   script(src="/javascript/script.js")
